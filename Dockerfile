@@ -14,6 +14,7 @@ RUN apt-get update && apt-get install --install-recommends -y \
     clang-tidy \
     gcc \
     g++ \
+    gdb \
     gcc-arm-linux-gnueabihf \
     g++-arm-linux-gnueabihf \
     cmake \
