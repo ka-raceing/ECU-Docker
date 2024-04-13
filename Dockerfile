@@ -32,14 +32,14 @@ RUN make install
 RUN export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 # bastis vector blf
-WORKDIR /tmp/
-RUN https://github.com/Technica-Engineering/vector_blf.git \
-&& cd vector_blf \
-&& mkdir build \
-&& cd build \
-&& cmake .. \
-&& make \
-&& make install
+RUN apt-get install doxygen -y
+RUN git clone https://github.com/Technica-Engineering/vector_blf.git &&\
+    cd vector_blf &&\
+    mkdir build &&\
+    cd build &&\
+    cmake .. &&\
+    make &&\
+    make install
 
 WORKDIR /
 CMD ["bash"]
