@@ -32,14 +32,14 @@ RUN make install
 RUN export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
 
 # bastis vector blf
-RUN https://github.com/Technica-Engineering/vector_blf.git
-RUN cd vector_blf
-RUN mkdir build
-RUN cd build
-RUN cmake ..
-RUN make
-RUN make install
-RUN make package
+WORKDIR /tmp/
+RUN https://github.com/Technica-Engineering/vector_blf.git \
+&& cd vector_blf \
+&& mkdir build \
+&& cd build \
+&& cmake .. \
+&& make \
+&& make install
 
 WORKDIR /
 CMD ["bash"]
