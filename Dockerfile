@@ -29,10 +29,13 @@ WORKDIR /tmp/vector_blf/build
 RUN cmake -DOPTION_RUN_DOXYGEN=OFF ..
 RUN make install
 
+RUN export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/lib"
+
 # bastis vector blf
-WORKDIR /tmp/
 RUN https://github.com/Technica-Engineering/vector_blf.git
-WORKDIR /tmp/vector_blf/build
+RUN cd vector_blf
+RUN mkdir build
+RUN cd build
 RUN cmake ..
 RUN make
 RUN make install
