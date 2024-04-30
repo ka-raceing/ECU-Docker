@@ -18,6 +18,7 @@ RUN apt-get update && apt-get install --install-recommends -y \
     gdb \
     gcc-arm-linux-gnueabihf \
     g++-arm-linux-gnueabihf \
+    crossbuild-essential-arm64 \
     cmake \
     make \
     zlib1g-dev
