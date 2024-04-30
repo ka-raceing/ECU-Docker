@@ -37,7 +37,7 @@ RUN git clone https://github.com/Technica-Engineering/vector_blf.git &&\
     cd vector_blf &&\
     mkdir build &&\
     cd build &&\
-    cmake .. &&\
+    cmake -DOPTION_RUN_DOXYGEN=OFF .. &&\
     make &&\
     make install
 
