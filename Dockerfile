@@ -23,7 +23,7 @@ RUN apt-get update && apt-get install --install-recommends -y \
     make \
     zlib1g-dev
 
-#vector_blf
+# vector_blf
 WORKDIR /tmp/
 RUN git clone https://bitbucket.org/tobylorenz/vector_blf.git # TODO include as submodule and copy inside
 WORKDIR /tmp/vector_blf/build
