@@ -21,7 +21,11 @@ RUN apt-get update && apt-get install --install-recommends -y \
     crossbuild-essential-arm64 \
     cmake \
     make \
+    python3 \
+    python3-pip \
     zlib1g-dev
+
+RUN python3 -m pip install --break-system-packages cantools
 
 # vector_blf
 WORKDIR /tmp/
