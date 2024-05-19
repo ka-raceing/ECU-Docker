@@ -27,7 +27,7 @@ RUN apt-get update && apt-get install --install-recommends -y \
 
 RUN python3 -m pip install --break-system-packages cantools
 
-RUN alias python=python3
+RUN ln -s /usr/bin/python3 /usr/bin/python
 
 # vector_blf
 WORKDIR /tmp/
